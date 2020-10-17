@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="side">
+        <p>Caso aparacer uma mensagem de erro na tela, <span>pressione "AC"</span> para reiniciar a calculadora.</p>
+        <table>
+            <tr>
+                <th>Mensagens de erro possiveis</th>
+            </tr>
+            <tr>
+                <td>Erro</td>
+            </tr>
+            <tr>
+                <td>NaN</td>
+            </tr>
+            <tr>
+                <td>Undefined</td>
+            </tr>
+        </table>
+    </div>
+    <form id="calculadora">
+        <div class="visor">
+            <input type="button" name="res" id="res" value="" class="visor_input">
+        </div>
+        <div class="calc_linhas">
+            <input type="button" class="calc_botao_fun" onclick="MRC();" value="mrc">
+            <input type="button" onclick="mMinus()" class="calc_botao_fun" value="m-">
+            <input type="button" onclick="mPlus()" class="calc_botao_fun" value="m+">
+            <input type="button" onclick="pegaVal('/')" class="calc_botao_op" value="÷">
+        </div>
+        <div class="calc_linhas">
+            <input type="button" onclick="pegaVal(value)" class="calc_botao" value="7">
+            <input type="button" onclick="pegaVal(value)" class="calc_botao" value="8">
+            <input type="button" onclick="pegaVal(value)" class="calc_botao" value="9">
+            <input type="button" onclick="pegaVal('*')" class="calc_botao_op" value="x">
+        </div>
+        <div class="calc_linhas">
+            <input type="button" onclick="pegaVal(value)" class="calc_botao" value="4">
+            <input type="button" onclick="pegaVal(value)" class="calc_botao" value="5">
+            <input type="button" onclick="pegaVal(value)" class="calc_botao" value="6">
+            <input type="button" onclick="pegaVal(value)" class="calc_botao_op" value="-">
+        </div>
+        <div class="calc_linhas">
+            <input type="button" onclick="pegaVal(value)" class="calc_botao" value="1">
+            <input type="button" onclick="pegaVal(value)" class="calc_botao" value="2">
+            <input type="button" onclick="pegaVal(value)" class="calc_botao" value="3">
+            <input type="button" onclick="pegaVal(value)" class="calc_botao_op" value="+">
+        </div>
+        <div class="calc_linhas">
+            <input type="button" onclick="pegaVal(value)" class="calc_botao" value="0">
+            <input type="button" onclick="pegaVal(value)" class="calc_botao" value=".">
+            <input type="button" onclick="apag()" class="calc_botao" value="AC">
+            <input type="button" onclick="calculo()" class="calc_botao_res" value="=">
+        </div>
+    </form>
+
+    <script src="calc.js"></script>
+</body>
+
+</html>
+<!-- Marcel Fernando - 2020 -->
